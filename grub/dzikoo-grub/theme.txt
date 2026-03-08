@@ -1,0 +1,47 @@
+# Dzikoo Linux GRUB Theme 
+# Copyright (C) 2026 Finlyson Mwadambo Msiska 
+
+# Background 
+desktop-color: "#0D9488" 
+desktop-image: "background.png" 
+
+# Title text 
++ label { 
+  text = "DZIKOO LINUX" 
+  font = "DejaVu Sans Bold 24" 
+  color = "#FFFFFF" 
+  align = "center" 
+  preferred-size = "100%, 60" 
+  top = "5%" 
+  left = "0%" 
+}
+
+# Boot menu 
++ boot_menu { 
+  left = "25%" 
+  top = "20%" 
+  width = "50%" 
+  height = "60%" 
+  item-font = "DejaVu Sans Regular 14" 
+  item-color = "#F8F8F7" 
+  selected-item-color = "#FFFFFF"
+selected-item-pixmap-style = "select_*" 
+  item-height = 36 
+  item-padding = 15 
+  item-spacing = 4 
+  icon-width = 24 
+  icon-height = 24 
+  scrollbar = false 
+} 
+
+# Progress bar at bottom (shows boot timeout countdown) 
++ progress_bar { 
+  id = "__timeout__" 
+  left = "25%" 
+  top = "84%" 
+  width = "50%"
+height = "8" 
+  fg-color = "#EA580C" 
+  bg-color = "rgba(0,0,0,0.3)" 
+  border-color = "rgba(0,0,0,0)" 
+} 

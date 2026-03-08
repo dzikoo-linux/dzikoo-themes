@@ -1,0 +1,25 @@
+# Dzikoo Linux Plymouth Script
+# Copyright (C) 2026 Finlyson Mwadambo Msiska - GPL-3.0
+
+# Background: deep teal 
+Window.SetBackgroundTopColor(0.05, 0.58, 0.53); 
+Window.SetBackgroundBottomColor(0.06, 0.47, 0.43);
+
+# Logo image (you will create this 200x200 PNG) 
+logo.image = Image("dzikoo-logo-boot.png"); 
+logo.sprite = Sprite(logo.image); 
+logo.sprite.SetX(Window.GetWidth()  / 2 - logo.image.GetWidth()  / 2); 
+logo.sprite.SetY(Window.GetHeight() / 2 - logo.image.GetHeight() / 2 - 40);
+
+# OS name text 
+name_text = Image.Text("DZIKOO LINUX", 1.0, 1.0, 1.0, 1, "Sans Bold 18"); 
+name_sprite = Sprite(name_text); 
+name_sprite.SetX(Window.GetWidth() / 2 - name_text.GetWidth() / 2); 
+name_sprite.SetY(Window.GetHeight() / 2 + 80); 
+
+# Loading dots (orange accent) 
+progress_box.image = Image.Text("...", 0.92, 0.35, 0.05, 1, "Sans 14"); 
+progress_sprite = Sprite(progress_box.image); 
+progress_sprite.SetX(Window.GetWidth() / 2 - progress_box.image.GetWidth() / 2); 
+progress_sprite.SetY(Window.GetHeight() / 2 + 110);
+

@@ -1,0 +1,8 @@
+[Plymouth Theme] 
+Name=Dzikoo Splash 
+Description=Dzikoo Linux boot splash - Teal and Sunset Orange 
+ModuleName=script 
+
+[script] 
+ImageDir=/usr/share/plymouth/themes/dzikoo-splash/images 
+ScriptFile=/usr/share/plymouth/themes/dzikoo-splash/dzikoo-splash.script
