@@ -1,0 +1,126 @@
+/* Dzikoo Linux GTK3 Theme 
+   Copyright (C) 2026 Finlyson Mwadambo Msiska 
+   License: GPL-3.0 */ 
+
+/* ── Color Variables ─────────────────────── */ 
+@define-color teal_primary   #0D9488; 
+@define-color teal_dark      #0F766E; 
+@define-color teal_light     #CCFBF1; 
+@define-color orange_accent  #EA580C; 
+@define-color orange_light   #FFF7ED; 
+@define-color bg_base        #F8F8F7;
+@define-color bg_surface     #FFFFFF; 
+@define-color text_primary   #1C1917; 
+@define-color text_secondary #57534E; 
+@define-color border_color   #D4D4D0; 
+@define-color selected_bg    @teal_primary; 
+@define-color selected_fg    #FFFFFF; 
+
+/* ── Window base ─────────────────────────── */ 
+window, .background { 
+  background-color: @bg_base; 
+  color: @text_primary; 
+} 
+  
+/* ── Buttons ─────────────────────────────── */ 
+button { 
+  background: @bg_surface; 
+  border: 1px solid @border_color; 
+  border-radius: 6px; 
+  color: @text_primary; 
+  padding: 6px 14px; 
+  transition: all 0.15s ease; 
+} 
+button:hover { 
+  background: @teal_light; 
+  border-color: @teal_primary; 
+} 
+button:active, button.suggested-action { 
+  background: @teal_primary; 
+  color: white; 
+  border-color: @teal_dark; 
+} 
+button.destructive-action { 
+  background: @orange_accent; 
+  color: white; 
+} 
+  
+/* ── Header bars & Toolbars ──────────────── */ 
+headerbar, toolbar { 
+  background: @teal_primary; 
+  color: white; 
+  border-bottom: 2px solid @teal_dark; 
+} 
+headerbar button, toolbar button { 
+  background: transparent; 
+  border: 1px solid rgba(255,255,255,0.3); 
+  color: white; 
+} 
+headerbar button:hover { 
+  background: rgba(255,255,255,0.15); 
+} 
+
+/* ── Selection highlight ─────────────────── */ 
+selection, *:selected { 
+  background-color: @selected_bg; 
+  color: @selected_fg; 
+} 
+  
+/* ── Scrollbars ──────────────────────────── */ 
+scrollbar slider { 
+  background: @teal_primary; 
+  border-radius: 10px; 
+  min-width: 8px; 
+  min-height: 8px; 
+} 
+scrollbar trough { background: @bg_base; } 
+
+/* ── Text entries ────────────────────────── */ 
+entry { 
+  background: @bg_surface; 
+  border: 1px solid @border_color; 
+  border-radius: 6px; 
+  color: @text_primary; 
+  padding: 6px 10px; 
+} 
+entry:focus { 
+  border-color: @teal_primary; 
+  box-shadow: 0 0 0 2px @teal_light; 
+} 
+
+/* ── Menubar & Menus ─────────────────────── */ 
+menubar { 
+  background: @teal_dark; 
+  color: white; 
+} 
+menu, menuitem { 
+  background: @bg_surface; 
+  color: @text_primary; 
+} 
+menuitem:hover { 
+  background: @teal_primary; 
+  color: white; 
+} 
+  
+
+/* ── Sidebar ─────────────────────────────── */ 
+.sidebar { background: @bg_base; } 
+.sidebar row:selected { 
+  background: @teal_primary; 
+  color: white; 
+} 
+  
+/* ── Progress bars ───────────────────────── */ 
+progressbar progress { 
+  background: @teal_primary; 
+  border-radius: 4px; 
+} 
+progressbar trough { background: @border_color; } 
+  
+/* ── Notifications ───────────────────────── */ 
+.notification { 
+  background: @bg_surface; 
+  border-left: 4px solid @orange_accent; 
+  border-radius: 4px; 
+} 
+
